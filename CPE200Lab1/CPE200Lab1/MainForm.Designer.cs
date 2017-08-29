@@ -49,6 +49,13 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.btnSquareroot = new System.Windows.Forms.Button();
+            this.btnOneoverx = new System.Windows.Forms.Button();
+            this.btnMplus = new System.Windows.Forms.Button();
+            this.btnMR = new System.Windows.Forms.Button();
+            this.btnMC = new System.Windows.Forms.Button();
+            this.btnMs = new System.Windows.Forms.Button();
+            this.btnMminus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -276,7 +283,7 @@
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(12, 54);
+            this.lblDisplay.Location = new System.Drawing.Point(64, 9);
             this.lblDisplay.MinimumSize = new System.Drawing.Size(365, 0);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(365, 82);
@@ -284,11 +291,90 @@
             this.lblDisplay.Text = "0";
             this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Form1
+            // btnSquareroot
+            // 
+            this.btnSquareroot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSquareroot.Location = new System.Drawing.Point(388, 148);
+            this.btnSquareroot.Name = "btnSquareroot";
+            this.btnSquareroot.Size = new System.Drawing.Size(88, 64);
+            this.btnSquareroot.TabIndex = 21;
+            this.btnSquareroot.Text = "√";
+            this.btnSquareroot.UseVisualStyleBackColor = true;
+            this.btnSquareroot.Click += new System.EventHandler(this.btnSquareroot_Click);
+            // 
+            // btnOneoverx
+            // 
+            this.btnOneoverx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOneoverx.Location = new System.Drawing.Point(388, 218);
+            this.btnOneoverx.Name = "btnOneoverx";
+            this.btnOneoverx.Size = new System.Drawing.Size(88, 64);
+            this.btnOneoverx.TabIndex = 22;
+            this.btnOneoverx.Text = "1/x";
+            this.btnOneoverx.UseVisualStyleBackColor = true;
+            this.btnOneoverx.Click += new System.EventHandler(this.btnOneoverx_Click);
+            // 
+            // btnMplus
+            // 
+            this.btnMplus.Location = new System.Drawing.Point(200, 106);
+            this.btnMplus.Name = "btnMplus";
+            this.btnMplus.Size = new System.Drawing.Size(88, 27);
+            this.btnMplus.TabIndex = 23;
+            this.btnMplus.Text = "M+";
+            this.btnMplus.UseVisualStyleBackColor = true;
+            this.btnMplus.Click += new System.EventHandler(this.btnOperator_Click);
+            // 
+            // btnMR
+            // 
+            this.btnMR.Location = new System.Drawing.Point(106, 106);
+            this.btnMR.Name = "btnMR";
+            this.btnMR.Size = new System.Drawing.Size(88, 27);
+            this.btnMR.TabIndex = 24;
+            this.btnMR.Text = "MR";
+            this.btnMR.UseVisualStyleBackColor = true;
+            this.btnMR.Click += new System.EventHandler(this.btnMR_Click);
+            // 
+            // btnMC
+            // 
+            this.btnMC.Location = new System.Drawing.Point(12, 106);
+            this.btnMC.Name = "btnMC";
+            this.btnMC.Size = new System.Drawing.Size(88, 27);
+            this.btnMC.TabIndex = 25;
+            this.btnMC.Text = "MC";
+            this.btnMC.UseVisualStyleBackColor = true;
+            this.btnMC.Click += new System.EventHandler(this.btnMC_Click);
+            // 
+            // btnMs
+            // 
+            this.btnMs.Location = new System.Drawing.Point(388, 106);
+            this.btnMs.Name = "btnMs";
+            this.btnMs.Size = new System.Drawing.Size(88, 27);
+            this.btnMs.TabIndex = 26;
+            this.btnMs.Text = "MS";
+            this.btnMs.UseVisualStyleBackColor = true;
+            this.btnMs.Click += new System.EventHandler(this.btnOperator_Click);
+            // 
+            // btnMminus
+            // 
+            this.btnMminus.Location = new System.Drawing.Point(294, 106);
+            this.btnMminus.Name = "btnMminus";
+            this.btnMminus.Size = new System.Drawing.Size(88, 27);
+            this.btnMminus.TabIndex = 27;
+            this.btnMminus.Text = "M-";
+            this.btnMminus.UseVisualStyleBackColor = true;
+            this.btnMminus.Click += new System.EventHandler(this.btnOperator_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 508);
+            this.ClientSize = new System.Drawing.Size(503, 508);
+            this.Controls.Add(this.btnMminus);
+            this.Controls.Add(this.btnMs);
+            this.Controls.Add(this.btnMC);
+            this.Controls.Add(this.btnMR);
+            this.Controls.Add(this.btnMplus);
+            this.Controls.Add(this.btnOneoverx);
+            this.Controls.Add(this.btnSquareroot);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -310,7 +396,7 @@
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,6 +426,13 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button btnSquareroot;
+        private System.Windows.Forms.Button btnOneoverx;
+        private System.Windows.Forms.Button btnMplus;
+        private System.Windows.Forms.Button btnMR;
+        private System.Windows.Forms.Button btnMC;
+        private System.Windows.Forms.Button btnMs;
+        private System.Windows.Forms.Button btnMminus;
     }
 }
 
